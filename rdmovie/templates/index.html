@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Ingresa una URL para empezar</h2>
+<form method="post" action="{% url 'get_url' %}"> {% csrf_token %}
+    <input type="url" placeholder="List URL" name="url"/>
+    <input type="submit">
+</form>
+
+{% endblock %}

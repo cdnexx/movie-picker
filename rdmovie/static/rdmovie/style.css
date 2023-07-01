@@ -1,0 +1,30 @@
+html, body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0 10px 0 10px;
+    font-weight: lighter;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+}
+
+.center {
+    width: 60%;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow-x:auto;
+}

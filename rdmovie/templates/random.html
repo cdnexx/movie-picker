@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div style="display: flex; justify-content: space-between;">
+    <div style="margin-right: 30px;">
+        <p>Your random pick is...</p>
+        <h1>{{ title }} ({{ release }})</h1>
+        <hr>
+        <div>
+            <p style="text-align: justify;">{{ overview }}</p>
+        </div>
+        <h3>From the "{{ list_title }}".</h3>
+    </div>
+    <img src="{{ image }}" style="width: 300px; border-radius: 10px;"/>
+</div>
+
+
+
+{% endblock %}

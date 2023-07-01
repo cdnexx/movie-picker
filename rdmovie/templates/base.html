@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RD Movie Selector</title>
+    <link rel="stylesheet" href="{% static 'rdmovie/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <h1><a href="/">Random slector for</a> <a href="http://listchallenges.com/">listchallenges.com</a></h1>
+        <form method="post" action="{% url 'get_url' %}"> {% csrf_token %}
+            <input type="url" placeholder="List URL" name="url"/>
+            <input type="submit">
+        </form>
+    </nav>
+    <div class="container">
+        <div class="center">
+            {% block content %}{% endblock %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert-message">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+             {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
+

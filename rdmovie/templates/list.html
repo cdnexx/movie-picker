@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<script>
+    function showHide(){
+        if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}
+    }
+
+</script>
+<div class="list-header" style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>{{ list_title }}</h2>
+    <a href="/random/{{ list_id }}">Pick random</a>
+</div>
+<div class="movies" style="background-color: #ececec; padding: 10px; border-radius: 10px;">
+    <button onclick="showHide()">Show movies</button>
+    <div id="spoiler" style="display: none;">
+        <ol>
+            {% for movie in movie_list %}
+                <li>{{ movie }}</li>
+            {% endfor%}
+        </ol>
+    </div>
+</div>
+
+{% endblock %}
